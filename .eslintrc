@@ -1,0 +1,8 @@
+{
+    "plugins": ["prettier"],
+    "extends": ["plugin:prettier/recommended", "@react-native-community"],
+    "rules": {
+        "quotes": [2, "double", { "avoidEscape": true }],
+        "indent": [4, "tab"]
+    }
+}
