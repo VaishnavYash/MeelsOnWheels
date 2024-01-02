@@ -1,6 +1,5 @@
 import React from "react";
 import { View } from "react-native";
-import { SvgXml } from "react-native-svg";
 import star  from "../../../../assets/star";
 import open  from "../../../../assets/open";
 import close  from "../../../../assets/closed";
@@ -8,6 +7,7 @@ import { Spacer } from "../../../components/spacer/spacer.components";
 import { Text } from "../../../components/typography/typo.components";
 import {
     RestaurantCardCover,
+    RestaurantCard,
     Info,
     Rating,
     Section,
@@ -31,7 +31,7 @@ export const RestaurantInfoCard = ({ restaurant = {}}) => {
     const ratingArray = Array.from(new Array(Math.floor(rating)))
   return (
     <View>
-        <Card elevation={5}>
+        <RestaurantCard elevation={5}>
             <RestaurantCardCover key={name} source={{uri: photos[0]}} />
             <Info>
                 <Text variant = "label"> {name} </Text>
@@ -39,7 +39,7 @@ export const RestaurantInfoCard = ({ restaurant = {}}) => {
                     <Rating>
                         {ratingArray.map((item, index) => {
                             const newItem = { ...item, id: index + 1 };
-                            return <SvgXml key={newItem.id} xml={star} width={20} height={20} />;
+                            return <Open key={newItem.id} xml={star} width={20} height={20} />;
                         })}    
                     </Rating>
 
@@ -64,7 +64,7 @@ export const RestaurantInfoCard = ({ restaurant = {}}) => {
                 <Text variant = "caption"> {address} </Text>
             </Info>
             
-        </Card>
+        </RestaurantCard>
     </View>
   );
 };

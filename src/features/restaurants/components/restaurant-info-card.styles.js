@@ -1,5 +1,6 @@
 import styled from "styled-components/native";
 import { Card } from "react-native-paper";
+import { SvgXml } from "react-native-svg";
 
 export const RestaurantCardCover = styled(Card.Cover)`
     padding: ${(props) => props.theme.space.md};
@@ -26,4 +27,8 @@ export const Open = styled(SvgXml)`
 export const Icon = styled.Image`
     width: 25;
     height: 25; 
+`
+export const RestaurantCard = styled(Card)`
+    marginHorizontal: ${(props) => props.theme.space.lrg};
+    marginVertical: ${(props) => props.theme.space.md};
 `
