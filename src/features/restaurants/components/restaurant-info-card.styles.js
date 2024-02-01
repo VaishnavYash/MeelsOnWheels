@@ -25,8 +25,8 @@ export const Open = styled(SvgXml)`
     flexDirection: row;
 `
 export const Icon = styled.Image`
-    width: 25;
-    height: 25; 
+    width: 25px;
+    height: 25px; 
 `
 export const RestaurantCard = styled(Card)`
     marginHorizontal: ${(props) => props.theme.space.lrg};
