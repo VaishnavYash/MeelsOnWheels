@@ -5,14 +5,17 @@ import { RestaurantInfoCard } from "../components/restaurant-info-card.component
 import styled from "styled-components/native";
 import { RestaurantContext } from "../../../services/restaurants/restaurants.context";
 import { Search } from "../components/search.components";
+
 const Loading = styled(ActivityIndicator)`
-  margin-left: -25;
+  marginLeft: -25px;
 `;
+
 const LoadView = styled.View`
   position: absolute;
   top: 50%;
   left: 50%;
 `;
+
 export const RestaurantScreen = ({ navigation }) => {
   const { isLoading, restaurants} = useContext(RestaurantContext);
   // console.log(navigation)

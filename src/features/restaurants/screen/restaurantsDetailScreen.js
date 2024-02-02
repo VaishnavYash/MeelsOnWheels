@@ -20,7 +20,7 @@ export const RestaurantDetailScreen = ( { route } ) => {
             <ScrollView>
                 <List.Accordion
                     title="Breakfast"
-                    left={props => <List.Icon {...props} icon="bread-slice" />}
+                    left={(props) => {<List.Icon {...props} icon="bread-slice" />}}
                     expanded={breakfast}
                     onPress={() => setBreakfast(!breakfast)}>
                     <List.Item title="Dosa" />
@@ -31,7 +31,7 @@ export const RestaurantDetailScreen = ( { route } ) => {
 
                 <List.Accordion
                     title="Lunch"
-                    left={props => <List.Icon {...props} icon="food"/>}
+                    left={(props) => {<List.Icon {...props} icon="food"/>}}
                     expanded={lunch}
                     onPress={() => setLunch(!lunch)}>
                     <List.Item title="Daal Roti" />
@@ -41,7 +41,7 @@ export const RestaurantDetailScreen = ( { route } ) => {
 
                 <List.Accordion
                     title="Dinner"
-                    left={props => <List.Icon {...props} icon="food-variant"/>}
+                    left={(props) => {<List.Icon {...props} icon="food-variant"/>}}
                     expanded={dinner}
                     onPress={() => setDinner(!dinner)}>
                     <List.Item title="Spaghetti Bolognese" />
@@ -51,7 +51,7 @@ export const RestaurantDetailScreen = ( { route } ) => {
 
                 <List.Accordion
                     title="Drinks"
-                    left={props => <List.Icon {...props} icon="glass-cocktail"/>}
+                    left={(props) => {<List.Icon {...props} icon="glass-cocktail"/>}}
                     expanded={drinks}
                     onPress={() => setDrinks(!drinks)}>
                     <List.Item title="Coffee" />

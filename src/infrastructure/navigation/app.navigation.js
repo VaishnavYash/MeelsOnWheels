@@ -1,9 +1,11 @@
 import React from "react";
-import { Text } from "react-native";
+import { SafeAreaView, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { RestaurantsNavigator } from "./restaurants.navigator";
+import { MapsScreen } from "../../features/map/screen/mapScreen";
+
 
 const Tab = createBottomTabNavigator();
 const ICON_NAME = {
@@ -15,8 +17,13 @@ const ICON_NAME = {
     Maps: 'ios-map-outline'
   }
   
-const SettingsScreen = () => {return <Text>Setting!</Text>};
-const MapsScreen = () => {return <Text>Maps!</Text>};
+const SettingsScreen = () => {
+  return (
+    <SafeAreaView>
+      <Text> Setting </Text>
+    </SafeAreaView>
+  )
+};
 
 const createScreenOption = ({ route }) => {
     return {
@@ -26,11 +33,10 @@ const createScreenOption = ({ route }) => {
       },
       tabBarActiveTintColor: 'tomato',
       tabBarInactiveTintColor: 'gray',
-      headerShow: true, 
+      headerShown: false,
     }
   };
   
-
 export const AppNavigator = () => (
     <NavigationContainer>
         <Tab.Navigator screenOptions={createScreenOption}>

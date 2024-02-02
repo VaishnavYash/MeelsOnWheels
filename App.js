@@ -13,7 +13,6 @@ const MainView = styled.SafeAreaView`
   flex: 1;
   marginTop: ${StatusBar.currentHeight}px;
 `
-
 export default function App() {
   const [oswaldLoader] = useOswald({Oswald_400Regular});
   const [latoLoader] = useLato({Lato_400Regular});
@@ -23,7 +22,7 @@ export default function App() {
   }
 
   return (
-    <MainView>
+    <>
       <ThemeProvider theme={theme}>
         <LocationContextProvider>
           <RestaurantContextProvider>  
@@ -32,6 +31,6 @@ export default function App() {
         </LocationContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
-    </MainView>
+    </>
   );
 }
