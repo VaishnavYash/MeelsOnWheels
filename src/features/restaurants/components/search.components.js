@@ -9,7 +9,7 @@ const SearchView = styled.View`
   marginTop: ${(props) => props.theme.space.xl};
 `;
 
-export const Search = () => {
+export const Search = ({ isFavToggled, onFavToggled }) => {
     const { keyword, search } = useContext(LocationContext);
     const [searchKeyword, setSearchKeyword] = useState(keyword);
 
@@ -19,7 +19,9 @@ export const Search = () => {
 
     return (
         <SearchView>
-            <Searchbar 
+            <Searchbar
+                icon = {isFavToggled ? "heart" : "heart-outline"}
+                onIconPress={onFavToggled}
                 placeholder="Search Your City"
                 value = {searchKeyword}
                 onSubmitEditing={() => {

@@ -4,8 +4,11 @@ import styled, { ThemeProvider } from "styled-components/native";
 import { theme } from "./src/infrastructure/theme"
 import { useFonts as useOswald, Oswald_400Regular } from "@expo-google-fonts/oswald"
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato"
+
 import { RestaurantContextProvider } from "./src/services/restaurants/restaurants.context";
 import { LocationContextProvider } from "./src/services/location/location.context";
+import { FavouritesContextProvider } from "./src/services/favourite/favourites.context";
+
 import { Navigation } from "./src/infrastructure/navigation";
 import ExpoStatusBar from "expo-status-bar/build/ExpoStatusBar";
 
@@ -24,11 +27,13 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <LocationContextProvider>
-          <RestaurantContextProvider>  
-            <Navigation />
-          </RestaurantContextProvider>
-        </LocationContextProvider>
+        <FavouritesContextProvider>
+          <LocationContextProvider>
+            <RestaurantContextProvider>  
+              <Navigation />
+            </RestaurantContextProvider>
+          </LocationContextProvider>
+        </FavouritesContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>

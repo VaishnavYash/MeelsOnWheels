@@ -15,15 +15,15 @@ export const restaurantsRequest = (location) => {
 
 
 export function restaurantsTransform({ results = [] }) {
-    const changedData = results.map((restaurants) => {
-        restaurants.photos = restaurants.photos.map((p) => {
+    const changedData = results.map((restro) => {
+        restro.photos = restro.photos.map((p) => {
             return mockImages[Math.ceil(Math.random() * (mockImages.length - 1))];
         });
         return {
-            ...restaurants,
-            isClosedTemporarily: restaurants.business_status == "CLOSED_TEMPORARILY",
-            isOpenNow: restaurants?.opening_hours?.open_now,
-            address: restaurants.vicinity,
+            ...restro,
+            isClosedTemporarily: restro.business_status == "CLOSED_TEMPORARILY",
+            isOpenNow: restro?.opening_hours?.open_now,
+            address: restro.vicinity,
         };
     });
     return camelize(changedData);
