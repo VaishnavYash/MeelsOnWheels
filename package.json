@@ -13,7 +13,7 @@
     "@expo-google-fonts/inter": "^0.2.3",
     "@expo-google-fonts/lato": "^0.2.3",
     "@expo-google-fonts/oswald": "^0.2.3",
-    "@expo/webpack-config": "^19.0.0",
+    "@expo/webpack-config": "^19.0.1",
     "@react-native-async-storage/async-storage": "1.18.2",
     "@react-native-community/eslint-config": "^3.2.0",
     "@react-native-community/masked-view": "^0.1.11",
@@ -22,7 +22,7 @@
     "@react-navigation/stack": "^6.3.20",
     "camelize": "^1.0.1",
     "eslint": "^8.56.0",
-    "expo": "~49.0.15",
+    "expo": "^50.0.8",
     "expo-font": "~11.4.0",
     "expo-status-bar": "~1.6.0",
     "firebase": "^10.8.1",
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@expo/cli": "^0.10.16",
+    "@expo/cli": "^0.0.0",
     "eslint-plugin-prettier": "^5.1.2",
     "prettier": "^3.1.1"
   },

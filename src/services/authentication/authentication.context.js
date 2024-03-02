@@ -44,7 +44,8 @@ export const AuthenticationContextProvider  = ({ children }) => {
             user,
             isLoading,
             error,
-            onLogin,             
+            onLogin,
+            onRegister,         
         }}>
             {children}
         </AuthenticationContext.Provider>
