@@ -36,7 +36,7 @@ export const FavouritesContextProvider = ({ children }) => {
         try {
             const jsonValue = await AsyncStorage.getItem('@favourites');
             if(jsonValue !=null){
-                setFavourites(Json.parse(jsonValue))
+                setFavourites(JSON.parse(jsonValue))
             }
         } catch (e) {
             console.log("Error Loading", e)
@@ -45,11 +45,11 @@ export const FavouritesContextProvider = ({ children }) => {
 
     useEffect(() => {
         loadFav()
-    }, [])
+    }, []);
     
     useEffect(() => {
         saveFav(favourites)
-    }, [ favourites ])
+    }, [ favourites ]);
 
     return (
         <FavouritesContext.Provider value={ obj }>

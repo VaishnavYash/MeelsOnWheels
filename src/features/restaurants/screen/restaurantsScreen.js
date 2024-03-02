@@ -43,6 +43,7 @@ export const RestaurantScreen = ({ navigation }) => {
 
       <FlatList
         data={restaurants}
+        keyExtractor={(item) => toString(item.id)+item.name}
         renderItem={({ item }) => {
           return(
             <TouchableOpacity onPress={() => {
@@ -52,7 +53,6 @@ export const RestaurantScreen = ({ navigation }) => {
             </TouchableOpacity>
           );
         }}
-        keyExtractor={(item) => item.name}
       />
     </View>
   );

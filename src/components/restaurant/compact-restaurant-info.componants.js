@@ -16,7 +16,6 @@ const Item = styled.View`
 
 export const CompactRestaurantInfo = ({ restaurant }) => {
     const temp = restaurant.photos;
-    console.log(temp[0]);
     return (
         <Item>
             <CompactImage source={{ uri: temp[0] }} />
